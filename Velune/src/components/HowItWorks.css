@@ -1,0 +1,125 @@
+.how__header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: end;
+  margin-bottom: 64px;
+}
+
+.how__aside {
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.65;
+  text-align: right;
+  max-width: 280px;
+  justify-self: end;
+}
+
+.how__list {
+  border-top: 1px solid var(--border);
+}
+
+.how__step {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 32px;
+  padding: 36px 0;
+  border-bottom: 1px solid var(--border);
+  transition: background var(--transition);
+}
+
+.how__step:hover {
+  background: rgba(255, 255, 255, 0.015);
+  margin: 0 -32px;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.how__step-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.how__num {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--text-subtle);
+  line-height: 1;
+  transition: color var(--transition);
+}
+
+.how__step:hover .how__num {
+  color: var(--accent);
+}
+
+.how__connector {
+  width: 1px;
+  flex: 1;
+  min-height: 24px;
+  background: var(--border);
+  margin-top: 12px;
+}
+
+.how__step-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.how__step-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.how__title {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+}
+
+.how__tag {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  color: var(--text-subtle);
+  border: 1px solid var(--border);
+  padding: 4px 8px;
+  flex-shrink: 0;
+}
+
+.how__text {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.65;
+  max-width: 520px;
+}
+
+@media (max-width: 640px) {
+  .how__header {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .how__aside {
+    text-align: left;
+    justify-self: start;
+  }
+
+  .how__step {
+    grid-template-columns: 56px 1fr;
+    gap: 20px;
+  }
+
+  .how__step:hover {
+    margin: 0 -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
